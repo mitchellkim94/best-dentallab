@@ -1,0 +1,12 @@
+.intro_card {
+    box-sizing: border-box;
+    background-color: $col-grey-bg;
+    border-radius: 36px;
+    height: 380px;
+    padding: 28px 32px;
+    box-shadow: $shadow-card;
+
+    & h3 {
+        font-size: 24px;
+    }
+}

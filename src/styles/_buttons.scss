@@ -1,0 +1,25 @@
+.icon_button {
+    display: inline-flex;
+    line-height: 0;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+}
+
+.block_button {
+    background-color: $col-primary;
+    color: $col-white;
+    padding: 8px 12px;
+    border-radius: 60px;
+}
+
+.text_button {
+    display: inline-flex;
+    height: 28px;
+    align-items: center;
+    justify-content: space-between;
+    color: $col-blue-text;
+    font-size: 16px;
+    font-weight: 500;
+}
