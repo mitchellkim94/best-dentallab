@@ -1,0 +1,31 @@
+.swipe_container {
+    display: flex;
+    margin-left: 20px;
+    gap: 8px;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    & .swipe_slot {
+        flex-shrink: 0;
+        width: 40%;
+
+        & .swipe_contents {
+            width: 100%;
+            text-align: center;
+            
+            & .swipe_contents--image {
+                border-radius: 4vw;
+                padding: 16px;
+                background-color: $col-white;
+                margin-bottom: 8px;
+                
+                & img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

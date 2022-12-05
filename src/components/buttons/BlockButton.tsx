@@ -1,8 +1,20 @@
 import React, { PropsWithChildren } from "react"
 
-export default function BlockButton(props: PropsWithChildren<JSX.IntrinsicElements["button"]>) {
+type BlockButtonProps = PropsWithChildren<JSX.IntrinsicElements["button"]> & {
+    color?: string;
+    theme?: "light" | "dark";
+    size?: "small" | "medium" | "large"
+};
+
+export default function BlockButton(props: BlockButtonProps) {
     return (
-        <button className="block_button" onClick={props.onClick}>
+        <button 
+            className={`block_button ${props.size} ${props.theme}`} 
+            onClick={props.onClick}
+            style={{
+                backgroundColor: `${props.color || null}`
+            }}
+        >
             { props.children }
         </button>
     )

@@ -1,12 +1,54 @@
 .intro_card {
     box-sizing: border-box;
     background-color: $col-grey-bg;
-    border-radius: 36px;
-    height: 380px;
-    padding: 28px 32px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10vw;
+    width: 100%;
+    height: 110vw;
+    padding: 48px 32px;
     box-shadow: $shadow-card;
+    cursor: pointer;
 
     & h3 {
         font-size: 24px;
+    }
+}
+
+.info_card {
+    border-radius: 10vw;
+    background-color: $col-grey-bg;
+    padding: 48px 32px;
+
+    // 정보 이미지
+    & .info_card--image {
+        text-align: center;
+        margin-bottom: 24px;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    // 정보 아이콘
+    & .info_card--icon {
+        color: $col-primary;
+        margin-bottom: 24px;
+    }
+
+    // 정보 타이틀
+    & .info_card--title {
+        font-size: 24px;
+        margin-bottom: 24px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }   
+
+    // 정보
+    & .info_card--desc {
+        font-size: 18px;
     }
 }

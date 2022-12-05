@@ -12,6 +12,19 @@
     color: $col-white;
     padding: 8px 12px;
     border-radius: 60px;
+
+    &.light {
+        color: $col-black;
+    }
+
+    &.small {
+        font-size: $font-paragraph;
+        padding: 6px 12px;
+    }
+    &.large {
+        font-size: $font-large;
+        padding: 8px 16px;
+    }
 }
 
 .text_button {

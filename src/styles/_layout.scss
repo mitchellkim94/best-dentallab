@@ -1,5 +1,5 @@
 .page_layout {
-    & .contents {
-        padding: 20px;
+    &.grey {
+        background-color: $col-grey-bg;
     }
 }
