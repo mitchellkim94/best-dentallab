@@ -1,14 +1,21 @@
 import React from "react";
 import IntroCard, { IntroCardProps } from "../components/layouts/IntroCard";
 import PageLayout from "../components/layouts/PageLayout";
-import SwipeContainer from "../components/layouts/SwipeContainer";
 import CircleLabel from "../components/layouts/CircleLabel";
 import BlockButton from "../components/buttons/BlockButton";
 
 // Images
 import introImg from "../images/intro.png";
-import IntroDenture from "../images/intro_denture.png";
-import printer from "../images/machine-3d_printer.png";
+import choiceDelivery from "../images/choices/delivery.png";
+import choiceIso from "../images/choices/iso.png";
+import choicePatient from "../images/choices/patient.png";
+import choiceEquipment from "../images/choices/equipment.png";
+import choiceResarch from "../images/choices/research.png";
+import gateCadcam from "../images/cad/gate_cadcam.png";
+import gateDenture from "../images/denture/gate_denture.png";
+import gateModelless from "../images/modelless/gate_modelless.png";
+import gateMachines from "../images/machines/gate_machines.png";
+
 import { Link } from "gatsby";
 import ImageSection from "../components/layouts/ImageSection";
 
@@ -24,42 +31,40 @@ interface IntroCardData extends IntroCardProps {
 
 export default function HomePage()  {
     const choices: ImageInfo[] = [
-        { image: IntroDenture, label: '최첨단장비' },
-        { image: IntroDenture, label: '환자맞춤형' },
-        { image: IntroDenture, label: '전국배송' },
-        { image: IntroDenture, label: '모든보철관리' },
+        { image: choiceEquipment, label: '최첨단장비' },
+        { image: choicePatient, label: '환자맞춤형' },
+        { image: choiceDelivery, label: '전국배송' },
+        { image: gateDenture, label: '모든보철관리' },
+        { image: choiceResarch, label: '연구전담부서' },
+        { image: choiceIso, label: 'ISO인증완료' }
     ];
     
     const systems: IntroCardData[] = [
         {
-            bgImage: IntroDenture,
+            bgImage: gateDenture,
             title: <>DENTURE<br/>시스템</>,
             path: "/denture",
             onClick: () => {}
         },
         {
-            bgImage: IntroDenture,
+            bgImage: gateCadcam,
             title: <>CAD/CAM<br/>시스템</>,
             path: "/cadcam",
+            theme: 'dark',
             onClick: () => {}
         },
         {
-            bgImage: IntroDenture,
+            bgImage: gateModelless,
             title: <>MODELLESS<br/>시스템</>,
             path: "/modelless",
             onClick: () => {}
         },
-    ];
-
-    const machines: ImageInfo[] = [
-        { image: printer, label: '3D Printer' },
-        { image: printer, label: '3D Printer' },
-        { image: printer, label: '3D Printer' },
-        { image: printer, label: '3D Printer' },
-        { image: printer, label: '3D Printer' },
-        { image: printer, label: '3D Printer' },
-        { image: printer, label: '3D Printer' },
-        { image: printer, label: '3D Printer' },
+        {
+            bgImage: gateMachines,
+            title: <>보유장비</>,
+            path: "/machines",
+            onClick: () => {}
+        },
     ];
     
     return (
@@ -98,7 +103,7 @@ export default function HomePage()  {
                 <section className="home home_systems">
                     <h2 className="text--grey">
                         <strong className="text--blue">베스트 시스템,</strong><br/>
-                        체계적, 기술적, 보편적.
+                        체계적, 기술적, 미래지향적.
                     </h2>
                     {
                         systems.map((system, idx) => (
@@ -106,6 +111,7 @@ export default function HomePage()  {
                                 <IntroCard
                                     bgImage={system.bgImage}
                                     onClick={system.onClick}
+                                    theme={system.theme}
                                 >
                                     { system.title }
                                 </IntroCard>
@@ -115,30 +121,15 @@ export default function HomePage()  {
                 </section>
             </div>
 
-            <section className="home home_machines">
-                <h2 className="text--grey container">
-                    <strong className="text--black">보유장비. </strong>정성에<br/>
-                    기술을 더하다.
-                </h2>
-                <SwipeContainer
-                    contents={
-                        machines.map(machine => (
-                            <div className="swipe_contents">
-                                <div className="swipe_contents--image">
-                                    <img src={machine.image}/>
-                                </div>
-                                <span>{ machine.label }</span>
-                            </div>
-                        ))
-                    }
-                />
-            </section>
-
             <section className="home home_more container">
                 <h2>베스트 기공소 더 알아보기</h2>
                 <div className="buttons">
-                    <BlockButton size="large" color="#D2D2D7" theme="light">인스타그램</BlockButton>
-                    <BlockButton size="large" color="#D2D2D7" theme="light">카카오채널</BlockButton>
+                    <BlockButton size="large" color="#D2D2D7" theme="light" onClick={() => {
+                        location.href = 'https://instagram.com/bestdentallab';
+                    }}>인스타그램</BlockButton>
+                    <BlockButton size="large" color="#D2D2D7" theme="light" onClick={() => {
+                        location.href = 'http://pf.kakao.com/_ZLUxos';
+                    }}>카카오채널</BlockButton>
                 </div>
             </section>
 

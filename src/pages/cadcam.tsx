@@ -11,6 +11,10 @@ import customAbutmentImg from "../images/cad/custom_abutment.png";
 import anodizingImg from "../images/cad/anodizing.png";
 import inlayimg from "../images/cad/hybrid_ceramic_inlay.png";
 import printerImg from "../images/cad/3d_printer.png";
+import printerModel from "../images/cad/printer/model.png";
+import printerFipper from "../images/cad/printer/fipper.png";
+import printerGuide from "../images/cad/printer/guide.png";
+import printerCrown from "../images/cad/printer/crown.png";
 
 import { MdContentCut, MdCloseFullscreen, MdHistory, MdOutlineSignalWifi0Bar, MdInsertEmoticon, MdOutlineExpand, MdArrowDownward } from "react-icons/md";
 import ExplainLayout from "../components/layouts/ExplainLayout";
@@ -36,16 +40,20 @@ export default function CadcamPage()  {
 
     const printerResults: InfoCardProps[] = [
         {
-            infoImg: anodizingImg,
-            imgTitle: '황금빛 어노다이징'
+            infoImg: printerModel,
+            imgTitle: '구강스캔 모델'
         },
         {
-            infoImg: anodizingImg,
-            imgTitle: '황금빛 어노다이징'
+            infoImg: printerFipper,
+            imgTitle: 'Flexible Fipper'
         },
         {
-            infoImg: anodizingImg,
-            imgTitle: '황금빛 어노다이징'
+            infoImg: printerCrown,
+            imgTitle: 'Provisional Crown'
+        },
+        {
+            infoImg: printerGuide,
+            imgTitle: 'Surgical Guide'
         },
     ];
 

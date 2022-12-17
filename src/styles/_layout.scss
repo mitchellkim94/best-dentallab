@@ -36,8 +36,13 @@
     }
 
     & .explain_layout--image {
+        width: 100%;
         text-align: center;
         margin: 20px 0;
+
+        & img {
+            max-width: 100%;
+        }
     }
 
     & .explain_layout--info {

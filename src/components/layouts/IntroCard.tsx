@@ -4,13 +4,14 @@ import { MdChevronRight } from "react-icons/md";
 
 export interface IntroCardProps {
     bgImage?: string;
-    onClick: MouseEventHandler
+    onClick: MouseEventHandler;
+    theme?: 'dark' | 'light';
 }
 
 export default function IntroCard(props: PropsWithChildren<IntroCardProps>) {
     return (
         <div 
-            className="intro_card"
+            className={`intro_card ${props.theme}`}
             onClick={props.onClick}
             style={{ backgroundImage: `url(${props.bgImage})` }}
         >
