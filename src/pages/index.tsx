@@ -1,7 +1,6 @@
 import React from "react";
 import IntroCard, { IntroCardProps } from "../components/layouts/IntroCard";
 import PageLayout from "../components/layouts/PageLayout";
-import MenuHeader from "../components/headers/MenuHeader";
 import SwipeContainer from "../components/layouts/SwipeContainer";
 import CircleLabel from "../components/layouts/CircleLabel";
 import BlockButton from "../components/buttons/BlockButton";
@@ -50,12 +49,6 @@ export default function HomePage()  {
             path: "/modelless",
             onClick: () => {}
         },
-        {
-            bgImage: IntroDenture,
-            title: <>그 외 모든<br/>보철물</>,
-            path: "/others",
-            onClick: () => {}
-        },
     ];
 
     const machines: ImageInfo[] = [
@@ -74,6 +67,7 @@ export default function HomePage()  {
             <ImageSection
                 className="home_intro" 
                 bgImage={introImg}
+                headerTitle="''"
             >
                 <h1 className="text--white">
                     깨지지 않는<br/>
