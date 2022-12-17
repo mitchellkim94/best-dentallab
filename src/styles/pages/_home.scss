@@ -1,0 +1,60 @@
+.home {
+    & h2 {
+        margin-bottom: 24px;
+    }
+
+    padding: 36px 0;
+}
+
+.home_intro {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    & h1 {
+        width: 100%;
+        font-size: $font-title;
+        text-align: center;
+        position: absolute;
+        top: 210px;
+    }
+}
+
+.home_choice {
+    & .choice {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+.home_systems {
+    & .system {
+        display: block;
+        margin-bottom: 24px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.home_more {
+    & .buttons {
+        display: flex;
+        gap: 8px;
+    }
+}
+
+.home_footer {
+    padding: 36px 0 16px 0;
+    & p {
+        font-size: $font-paragraph;
+        line-height: 1.6;
+        padding: 24px 0 16px 0;
+        margin-bottom: 16px;
+        border-top: 1px solid $col-grey-border;
+        border-bottom: 1px solid $col-grey-border;
+    }
+}

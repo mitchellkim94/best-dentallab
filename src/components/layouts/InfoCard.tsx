@@ -1,12 +1,12 @@
 import React from "react";
 import * as ReactIcon from "react-icons";
 
-interface InfoCardProps {
+export interface InfoCardProps {
     infoImg?: string;
+    imgTitle?: string;
     icon?: ReactIcon.IconType;
-    title: string;
+    title?: string | JSX.Element;
     desc?: string;
-    align?: "left" | "center";
 };
 
 export default function InfoCard(props: InfoCardProps) {
@@ -31,9 +31,22 @@ export default function InfoCard(props: InfoCardProps) {
             }
 
             {/* 타이틀 */}
-            <h3 className="info_card--title">
-                { props.title }
-            </h3>
+            {
+                props.title
+                ? <h3 className="info_card--title">
+                    { props.title }
+                </h3>
+                : null
+            }
+
+            {/* 이미지 타이틀 */}
+            {
+                props.imgTitle
+                ? <h4 className="info_card--img_title">
+                    { props.imgTitle }
+                </h4>
+                : null
+            }
             
             {/* 설명 */}
             {

@@ -11,9 +11,9 @@ export default function SwipeContainer(props: SwipeProps) {
     return (
         <div className="swipe_container" {...handlers}>
             {
-                props.contents.map(content => {
+                props.contents.map((content, index) => {
                     return (
-                        <div className="swipe_slot">
+                        <div className="swipe_slot" key={`slot#${index}}`}>
                             { content }
                         </div>
                     )

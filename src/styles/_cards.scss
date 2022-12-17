@@ -13,6 +13,7 @@
 
     & h3 {
         font-size: 24px;
+        margin-bottom: 8px;
     }
 }
 
@@ -27,7 +28,8 @@
         margin-bottom: 24px;
 
         & img {
-            width: 100%;
+            width: auto;
+            height: 100%;
         }
     }
 
@@ -45,10 +47,17 @@
         &:last-child {
             margin: 0;
         }
-    }   
+    }
+
+    //정보 이미지 타이틀
+    & .info_card--img_title {
+        font-size: $font-large;
+        text-align: center;
+    }
 
     // 정보
     & .info_card--desc {
         font-size: 18px;
+        line-height: 1.6;
     }
 }

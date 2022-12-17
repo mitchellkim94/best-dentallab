@@ -3,3 +3,29 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.text--grey {
+    color: $col-grey-text;
+}
+.text--blue {
+    color: $col-blue-text;
+}
+.text--yellow {
+    color: $col-yellow-text;
+}
+.text--white {
+    color: $col-white;
+}
+.text--black {
+    color: $col-black;
+}
+
+.hr_border {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid $col-grey-border;
+}
+
+.opacity {
+    opacity: 0.4;
+}

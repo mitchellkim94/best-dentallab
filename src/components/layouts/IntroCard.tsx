@@ -2,7 +2,7 @@ import React, { MouseEventHandler, PropsWithChildren } from "react"
 import TextButton from "../buttons/TextButton";
 import { MdChevronRight } from "react-icons/md";
 
-interface IntroCardProps {
+export interface IntroCardProps {
     bgImage?: string;
     onClick: MouseEventHandler
 }

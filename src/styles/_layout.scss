@@ -1,5 +1,54 @@
 .page_layout {
+    min-height: 100vh;
     &.grey {
         background-color: $col-grey-bg;
+    }
+}
+
+.circle_label {
+    width: 100%;
+    text-align: center;
+
+    & .circle_label--img {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 96px;
+        height: 96px;
+        margin: auto;
+
+        & img {
+            width: 100%;
+        }
+
+        margin-bottom: 8px;
+    }
+
+    & .circle_label--label {
+        font-weight: $font-weight-b;
+    }
+}
+
+.explain_layout {
+    margin: 72px 20px;
+
+    & .explain_layout--title {
+        margin-bottom: 24px;
+    }
+
+    & .explain_layout--image {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    & .explain_layout--info {
+        display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            & > p {
+                padding: 20px;
+                font-size: $font-large;
+                line-height: 1.6;
+            }
     }
 }

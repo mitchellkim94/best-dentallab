@@ -1,11 +1,11 @@
-import React, { PropsWithChildren } from "react";
+import React from "react";
 import { MdMenu } from "react-icons/md";
-import logo from "../images/logo.svg";
-import IconButton from "./buttons/IconButton";
+import logo from "../../images/logo.svg";
+import IconButton from "../buttons/IconButton";
 
-export default function MenuHeader({ children }: PropsWithChildren) {
+export default function MenuHeader() {
     return (
-        <header>
+        <nav>
             <div className="menu_header">
                 <div className="head"></div>
                 <div className="center">
@@ -15,10 +15,6 @@ export default function MenuHeader({ children }: PropsWithChildren) {
                     <IconButton icon={<MdMenu size={24}/>}/>
                 </div>
             </div>
-            
-            <div className="sub_header">
-                { children }
-            </div>
-        </header>
+        </nav>
     );
 }

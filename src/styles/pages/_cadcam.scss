@@ -1,0 +1,86 @@
+.point_explain {
+    display: inline-flex;
+    align-items: center;
+    font-size: $font-large;
+    font-weight: $font-weight-b;
+    color: $col-blue-text;
+    padding: 0 20px;
+    gap: 8px;
+}
+
+.cad_intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 36px;
+    color: $col-white;
+
+    & h1 {
+        margin-bottom: 24px;
+    }
+
+    & p {
+        font-size: $font-large;
+        margin: 16px 0;
+    }
+}
+
+
+.inlay_info_card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: $col-grey-bg;
+    padding: 48px 32px;
+    border-radius: 10vw;
+
+    & .inlay_info_card--data {
+        & p {
+            font-size: $font-large;
+        }
+    }
+
+    & .info_bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+
+        & .bar {
+            position: relative;
+            display: block;
+            width: 200px;
+            height: 12px;
+            background-color: $col-grey-border;
+            margin-bottom: 16px;
+            border-radius: 25px;
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 160px;
+                height: 12px;
+                background-color: $col-primary;
+                border-radius: 25px;
+            }
+
+            &.bar--20 {
+                &::after {
+                    width: 40px;    
+                }
+            }
+
+        }
+        & .bar_title {
+            font-size: $font-large;
+            font-weight: 700;
+        }
+        
+        & strong {
+            font-size: $font-title;
+            color: $col-blue-text;
+        }
+    }
+}

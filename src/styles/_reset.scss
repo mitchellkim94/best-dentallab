@@ -1,5 +1,21 @@
-body, h1, h2, h3, p {
+* {
+    -webkit-tap-highlight-color : transparent;
+}
+
+body, h1, h2, h3, h4, p {
     margin: 0;
+}
+
+h1 {
+    font-size: $font-title;
+}
+
+h2 {
+    font-size: $font-subtitle;
+}
+
+h3, h4 {
+    font-size: $font-large;
 }
 
 button {
@@ -8,4 +24,9 @@ button {
     padding: 0;
     line-height: 1;
     cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }

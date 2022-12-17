@@ -1,6 +1,8 @@
 import React from "react";
 import { PropsWithChildren } from "react";
 import '../../styles/index.scss'
+import MenuHeader from "../headers/MenuHeader";
+import { RecoilRoot } from 'recoil';
 
 interface PageLayoutProps {
     grey?: boolean
@@ -8,8 +10,11 @@ interface PageLayoutProps {
 
 export default function PageLayout({ children, grey}: PropsWithChildren<PageLayoutProps>) {
     return (
-        <main className={`page_layout ${grey ? 'grey' : null}`}>
-            { children }
-        </main>
+        <RecoilRoot>
+            <main className={`page_layout ${grey ? 'grey' : null}`}>
+                <MenuHeader/>
+                { children }
+            </main>
+        </RecoilRoot>
     )
 }
