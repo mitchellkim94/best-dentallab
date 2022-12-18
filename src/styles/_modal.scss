@@ -1,0 +1,54 @@
+.modal_overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 8000;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    opacity: 0;
+    transition: opacity 0.2s, visibility 0.2s;
+    
+    
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    &.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.modal_layout {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    & > .modal_contents {
+        background-color: white;
+        height: inherit;
+        overflow: scroll;
+    }
+
+    &.right {
+        justify-content: flex-end;
+
+        & > .modal_contents {
+            animation: slideRightToLeft 0.2s;
+        }
+    }
+}
+
+@keyframes slideRightToLeft {
+    from { transform: translateX(100%);}
+    to { transform: translateX(0);}
+}

@@ -5,6 +5,12 @@
     height: 36px;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.2s;
+    border-radius: 50%;
+
+    &:active {
+        background-color: $col-btn-active;
+    }
 }
 
 .block_button {
