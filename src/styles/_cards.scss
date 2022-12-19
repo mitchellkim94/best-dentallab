@@ -19,6 +19,12 @@
     &.dark {
         color: $col-white;
     }
+
+    @include desktop {
+        height: 60vw;
+        max-height: 420px;
+        border-radius: 48px;
+    }
 }
 
 .info_card {

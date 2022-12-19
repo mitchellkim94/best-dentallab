@@ -45,7 +45,7 @@ export default function DenturePage()  {
             
             <ExplainLayout
                 title={<>베스트기공소의<br/>DentureSystem</>}
-            >
+            >   
                 {
                     dentures.map((denture, idx)=> (
                         <InfoCard

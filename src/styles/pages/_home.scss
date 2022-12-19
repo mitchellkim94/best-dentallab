@@ -19,6 +19,13 @@
         position: absolute;
         top: 210px;
     }
+
+    @include desktop {
+        & h1 {
+            font-size: max(6vw, $font-title);
+            top: calc((100vh / 3));
+        }
+    }
 }
 
 .home_choice {
@@ -26,16 +33,28 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
+
+        @include desktop {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
     }
 }
 
 .home_systems {
-    & .system {
-        display: block;
-        margin-bottom: 24px;
+    & .home_systems--list {
+        & .system {
+            display: block;
+            margin-bottom: 24px;
+    
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
 
-        &:last-child {
-            margin-bottom: 0;
+        @include desktop {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
         }
     }
 }

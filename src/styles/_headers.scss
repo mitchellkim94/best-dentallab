@@ -1,3 +1,8 @@
+.nav_header {
+    text-align: center;
+    background-color: $col-white;
+}
+
 // 메뉴헤더
 .menu_header {
     display: flex;
@@ -23,6 +28,10 @@
 
     & .tail {
 
+    }
+
+    @include desktop {
+        @include desktop-layout;
     }
 }
 
@@ -57,5 +66,9 @@
             margin: 0;
             font-size: $font-large;
         }
+    }
+
+    @include desktop {
+        @include desktop-layout;
     }
 }

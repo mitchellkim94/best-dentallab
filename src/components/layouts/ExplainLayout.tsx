@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useEffect, useRef } from "react";
+import React, { PropsWithChildren, useRef } from "react";
 import useTitleObserver from "../hooks/useTitleObserver";
 
 interface ExplainLayoutProps {

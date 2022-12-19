@@ -2,6 +2,12 @@
     width: 87.5%;
     margin-left: auto;
     margin-right: auto;
+
+    @media (min-width: 520px) {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
 }
 
 .text--grey {
@@ -28,4 +34,16 @@
 
 .opacity {
     opacity: 0.4;
+}
+
+// 데스크탑 반응형 CSS 컨테이너
+@mixin desktop {
+    @media (min-width: 520px) {
+        @content;
+    }
+}
+
+@mixin desktop-layout {
+    max-width: 1000px;
+    margin: 0 auto;
 }

@@ -105,19 +105,23 @@ export default function HomePage()  {
                         <strong className="text--blue">베스트 시스템,</strong><br/>
                         체계적, 기술적, 미래지향적.
                     </h2>
-                    {
-                        systems.map((system, idx) => (
-                            <Link to={system.path} className="system" key={`system#${idx}`}>                            
-                                <IntroCard
-                                    bgImage={system.bgImage}
-                                    onClick={system.onClick}
-                                    theme={system.theme}
-                                >
-                                    { system.title }
-                                </IntroCard>
-                            </Link>
-                        ))
-                    }
+                    <ul className="home_systems--list">
+                        {
+                            systems.map((system, idx) => (
+                                <li className="system">
+                                    <Link to={system.path} key={`system#${idx}`}>                            
+                                        <IntroCard
+                                            bgImage={system.bgImage}
+                                            onClick={system.onClick}
+                                            theme={system.theme}
+                                        >
+                                            { system.title }
+                                        </IntroCard>
+                                    </Link>
+                                </li>
+                            ))
+                        }
+                    </ul>
                 </section>
             </div>
 
