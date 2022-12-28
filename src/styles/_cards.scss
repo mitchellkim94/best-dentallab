@@ -71,4 +71,22 @@
         font-size: 18px;
         line-height: 1.6;
     }
+
+    @include desktop {
+        border-radius: min(10vw, 48px);
+        padding: 48px;
+
+        // 정보 이미지
+        & .info_card--image {
+            text-align: center;
+            margin-bottom: 24px;
+            
+
+            & img {
+                max-width: 320px;
+                width: auto;
+                height: auto;
+            }
+        }
+    }
 }

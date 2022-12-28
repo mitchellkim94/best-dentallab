@@ -1,0 +1,67 @@
+.contact {
+    max-width: 1000px;
+    padding: 0 20px;
+    margin: 0 auto;
+    h1 {
+        margin: 72px 0 48px 0;
+    }
+
+    & .contact_input {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin-bottom: 20px;
+        text-align: start;
+        
+        & > label {
+            font-size: $font-default;
+        }
+
+        & > input {
+            height: 48px;
+            padding: 0 16px;
+            font-size: $font-default;
+            background-color: $col-grey-bg;
+            border-radius: 6px;
+            &:focus {
+                outline: 2px solid $col-primary;
+            }
+        }
+
+        & > textarea {
+            resize: none;
+            height: 192px;
+            padding: 16px;
+            font-size: $font-default;
+            background-color: $col-grey-bg;
+            border-radius: 6px;
+
+            &::placeholder {
+                color: $col-grey-text;
+            }
+        }
+    }
+
+    form {
+        text-align: center;
+        padding-bottom: 72px;
+
+        & .btn_wrap {
+            text-align: center;
+
+            & > button {
+                background-color: $col-primary;
+                height: 48px;
+                width: min(100%, 360px);
+                font-size: $font-default;
+                color: white;
+                margin: 0 autou;
+                border-radius: 6px;
+            }
+
+            @include desktop {
+                text-align: right;
+            }
+        }
+    }
+}

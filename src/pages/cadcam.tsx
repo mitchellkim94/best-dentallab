@@ -10,7 +10,7 @@ import zirconiaImg from "../images/cad/zirconia_crown.png";
 import customAbutmentImg from "../images/cad/custom_abutment.png";
 import anodizingImg from "../images/cad/anodizing.png";
 import inlayimg from "../images/cad/hybrid_ceramic_inlay.png";
-import printerImg from "../images/cad/3d_printer.png";
+import printerImg from "../images/machines/printer.png";
 import printerModel from "../images/cad/printer/model.png";
 import printerFipper from "../images/cad/printer/fipper.png";
 import printerGuide from "../images/cad/printer/guide.png";
@@ -148,7 +148,7 @@ export default function CadcamPage()  {
                 <div className="inlay_info_card">
                     <div className="inlay_info_card--data">
                         <div className="info_bar">
-                            <div>
+                            <div className="info_bar--wrap">
                                 <span className="bar bar--80"></span>
                                 <span className="bar_title">세라믹</span>
                             </div>
@@ -159,7 +159,7 @@ export default function CadcamPage()  {
                     <span className="hr_border"></span>
                     <div className="inlay_info_card--data">
                         <div className="info_bar">
-                            <div>
+                            <div className="info_bar--wrap">
                                 <span className="bar bar--20"></span>
                                 <span className="bar_title">고강도레진</span>
                             </div>

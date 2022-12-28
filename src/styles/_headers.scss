@@ -13,7 +13,13 @@
     background-color: $col-white;
 
     & .head {
-        
+        display: inline-flex;
+        align-items: center;
+        gap: 16px;
+        & span {
+            font-size: $font-large;
+            font-weight: $font-weight-b;
+        }
     }
 
     & .center {

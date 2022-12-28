@@ -22,7 +22,7 @@
 
     @include desktop {
         & h1 {
-            font-size: max(6vw, $font-title);
+            font-size: max($font-title, 4vw);
             top: calc((100vh / 3));
         }
     }

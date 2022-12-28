@@ -31,12 +31,12 @@
 
     @include desktop {
         & .circle_label--img {
-            width: 12vw;
-            height: 12vw;
+            width: 7vw;
+            height: 7vw;
         }
         & .circle_label--label {
             font-weight: $font-weight-b;
-            font-size: max(1.8vw, $font-large);
+            font-size: max(1vw, $font-large);
         }
     }
 }
@@ -54,20 +54,20 @@
         margin: 20px 0;
 
         & img {
-            max-width: 100%;
+            max-width: 320px;
         }
     }
 
     & .explain_layout--info {
         display: flex;
-            flex-direction: column;
-            gap: 20px;
+        flex-direction: column;
+        gap: 20px;
 
-            & > p {
-                padding: 20px;
-                font-size: $font-large;
-                line-height: 1.6;
-            }
+        & > p {
+            padding: 20px;
+            font-size: $font-large;
+            line-height: 1.6;
+        }
     }
 
     @include desktop {

@@ -27,6 +27,21 @@ export default function NavigationMenu() {
         },
     ];
 
+    const foots = [
+        {
+            title: '견적문의',
+            path: '/contact'
+        },
+        {
+            title: '인스타그램',
+            path: 'https://instagram.com/bestdentallab'
+        },
+        {
+            title: '카카오채널',
+            path: 'http://pf.kakao.com/_ZLUxos',
+        }
+    ]
+
     return (
         <div className="navigation">
             {/* Activator */}
@@ -38,14 +53,27 @@ export default function NavigationMenu() {
                 position={'right'}
             >
                 <div className="navigation_menu">
-                    <div className="menu--btn">
-                        <IconButton icon={<MdClose size={24}/>} onClick={close}/>
-                    </div>
+                    <header className="menu--header">
+                        <div className="menu--btn--head"></div>
+                        <span>베스트 치과기공소</span>
+                        <div className="menu--btn">
+                            <IconButton icon={<MdClose size={24}/>} onClick={close}/>
+                        </div>
+                    </header>
                     <ul className="menu--list">
                         {
                             menus.map((menu, idx) => (
                                 <li key={`link#${idx}`}>
                                     <Link to={menu.path}>{menu.title}</Link>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                    <ul className="menu--list menu--footer">
+                        {
+                            foots.map((foot, idx) => (
+                                <li key={`foot#${idx}`}>
+                                    <Link to={foot.path}>{foot.title}</Link>
                                 </li>
                             ))
                         }

@@ -108,8 +108,8 @@ export default function HomePage()  {
                     <ul className="home_systems--list">
                         {
                             systems.map((system, idx) => (
-                                <li className="system">
-                                    <Link to={system.path} key={`system#${idx}`}>                            
+                                <li className="system" key={`system#${idx}`}>
+                                    <Link to={system.path}>                            
                                         <IntroCard
                                             bgImage={system.bgImage}
                                             onClick={system.onClick}

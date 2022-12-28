@@ -1,13 +1,29 @@
 .navigation_menu {
-    text-align: right;
+    text-align: start;
     height: calc(100% - 40px);
     padding: 20px 0;
+    width: 80vw;
 
-    & .menu--btn {
-        padding-right: 8px;
+    & .menu--header {
+        display: inline-flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        & .menu--btn--head {
+            width: 36px;
+            height: 36px;
+        }
+        & span {
+            font-weight: $font-weight-b;
+        }
+        & .menu--btn {
+            padding-right: 20px;
+        }
+
     }
     & .menu--list {
         font-size: $font-large;
+        padding: 24px 0;
 
         & > li {
             padding: 16px 20px 16px 32px;
@@ -17,5 +33,12 @@
                 background-color: $col-blue-hover;
             }
         }
+    }
+    & .menu--footer {
+        border-top: 1px solid $col-grey-border;
+    }
+
+    @include desktop {
+        width: 420px;
     }
 }

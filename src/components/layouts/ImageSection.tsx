@@ -17,7 +17,9 @@ export default function ImageSection(props: PropsWithChildren<ImageSectionProps>
             className={props.className}
             style={{
                 minHeight: '100vh',
-                backgroundImage: `url(${props.bgImage})` 
+                backgroundImage: `url(${props.bgImage})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
             }}
         >
             {props.children}
