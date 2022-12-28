@@ -65,7 +65,7 @@ export default function ContactPage()  {
 
                     <div className="contact_input">
                         <label>연락처</label>
-                        <input type="text" name="email" onChange={handleChange} />
+                        <input type="text" name="phone" onChange={handleChange} />
                     </div>
 
                     <div className="contact_input">
