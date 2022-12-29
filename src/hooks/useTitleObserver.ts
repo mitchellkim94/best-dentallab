@@ -1,6 +1,6 @@
 import { RefObject, useEffect } from "react";
 import { useSetRecoilState } from "recoil";
-import { pageTitle } from "../../store/page";
+import { pageTitle } from "../store/page";
 
 export default <T>(ref: RefObject<T> | null, title?: string) => {
     const titleSetter = useSetRecoilState(pageTitle);

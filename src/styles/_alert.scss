@@ -1,0 +1,45 @@
+.pop_alert--container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 40px);
+
+    & .pop_alert--box {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $col-green-bg;
+        border: 2px solid $col-green-border;
+        border-radius: 8px;
+        width: calc(100% - 32px);
+        padding: 8px 12px 8px 16px;
+        opacity: 1;
+        animation: showUp 0.3s;
+        margin: 24px 20px;
+
+        & .pop_alert--message {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+
+            & .pop_alert--icon {
+                display: inline-flex;
+                align-items: center;     
+                justify-content: center;
+                padding: 4px;
+                background-color: $col-green-point;
+                color: white;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+@keyframes showUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

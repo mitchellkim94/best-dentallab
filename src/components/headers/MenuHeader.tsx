@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../images/logo.svg";
-import useResponsive from "../hooks/useResponsive";
+import useResponsive from "../../hooks/useResponsive";
 import NavigationMenu from "./NavigationMenu";
 
 export default function MenuHeader() {

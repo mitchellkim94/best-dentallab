@@ -1,5 +1,5 @@
 import React, { PropsWithChildren, useRef } from "react";
-import useTitleObserver from "../hooks/useTitleObserver";
+import useTitleObserver from "../../hooks/useTitleObserver";
 
 interface ExplainLayoutProps {
     headerTitle?: string;

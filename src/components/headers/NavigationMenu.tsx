@@ -2,7 +2,7 @@ import React, { PropsWithChildren } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
 import { Link } from "gatsby";
 import IconButton from "../buttons/IconButton";
-import useModal from "../hooks/useModal";
+import useModal from "../../hooks/useModal";
 import ModalLayout from "../layouts/ModalLayout";
 
 export default function NavigationMenu() {
@@ -63,18 +63,22 @@ export default function NavigationMenu() {
                     <ul className="menu--list">
                         {
                             menus.map((menu, idx) => (
-                                <li key={`link#${idx}`}>
-                                    <Link to={menu.path}>{menu.title}</Link>
-                                </li>
+                                <Link to={menu.path} key={`link#${idx}`}>
+                                    <li>
+                                        {menu.title}
+                                    </li>
+                                </Link>
                             ))
                         }
                     </ul>
                     <ul className="menu--list menu--footer">
                         {
                             foots.map((foot, idx) => (
-                                <li key={`foot#${idx}`}>
-                                    <Link to={foot.path}>{foot.title}</Link>
-                                </li>
+                                <Link to={foot.path} key={`foot#${idx}`}>
+                                    <li>
+                                        {foot.title}
+                                    </li>
+                                </Link>
                             ))
                         }
                     </ul>
