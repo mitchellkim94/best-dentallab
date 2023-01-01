@@ -11,36 +11,37 @@ import imgZirMiller from "../images/machines/zir_miller.png";
 import imgAutMiller from "../images/machines/abut_miller.png";
 import imgFurnace from "../images/machines/furnace.png";
 import imgSintering from "../images/machines/sintering.png";
+import { SEO } from "../components/seo";
 
 export default function MachinesPage() {
     const machines: InfoCardProps[] = [
         {
             infoImg: imgPrinter,
-            imgTitle: '3D 프린터'
+            imgTitle: <>Sindoh A1sd<br/>(3D 프린터)</>
         },
         {
             infoImg: imgCasting,
-            imgTitle: '고주파 주조기'
+            imgTitle: <>millenium-R-HD<br/>(고주파 주조기)</>
         },
         {
             infoImg: imgLegin,
-            imgTitle: '자동 레진 주입기'
+            imgTitle: <><br/>(자동 레진 주입기)</>
         },
         {
             infoImg: imgZirMiller,
-            imgTitle: '지르코니아 밀링머신'
+            imgTitle: <>imes-icore 150i<br/>(지르코니아 밀링머신)</>
         },
         {
             infoImg: imgAutMiller,
-            imgTitle: '커스텀어버트먼트 밀링머신'
+            imgTitle: <>DOF craft-5x<br/>(커스텀어버트먼트 밀링머신)</>
         },
         {
             infoImg: imgFurnace,
-            imgTitle: '포세린 퍼니스'
+            imgTitle: <>ivoclar programat p319<br/>(포세린 퍼니스)</>
         },
         {
             infoImg: imgSintering,
-            imgTitle: '지르코니아 신터링 머신'
+            imgTitle: <>Tiger mini plus<br/>(지르코니아 신터링 머신)</>
         },
     ]
 
@@ -63,4 +64,10 @@ export default function MachinesPage() {
             </ExplainLayout>
         </PageLayout>
     );
+}
+
+export const Head = () => {
+    return (
+        <SEO title="베스트 치과기공소 - 보유장비"/>
+    )
 }

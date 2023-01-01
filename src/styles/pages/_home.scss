@@ -3,7 +3,7 @@
         margin-bottom: 24px;
     }
 
-    padding: 36px 0;
+    padding: 48px 0;
 }
 
 .home_intro {
@@ -63,6 +63,20 @@
     & .buttons {
         display: flex;
         gap: 8px;
+    }
+}
+
+.home_contact {
+    padding: 48px 0;
+    & .contact {
+        background-color: white;
+        padding: 48px 32px;
+        box-shadow: $shadow-card;
+        border-radius: 10vw;
+
+        & > form {
+            padding: 0;
+        }
     }
 }
 

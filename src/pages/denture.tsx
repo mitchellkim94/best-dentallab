@@ -9,6 +9,7 @@ import imgCuring from "../images/denture/curing.png";
 import imgInvocap from "../images/denture/invocap.png";
 import imgPartial from "../images/denture/partial.png";
 import imgValplast from "../images/denture/valplast.png";
+import { SEO } from "../components/seo";
 
 export default function DenturePage()  {
     const dentures: InfoCardProps[] = [
@@ -58,5 +59,11 @@ export default function DenturePage()  {
                 }
             </ExplainLayout>
         </PageLayout>
+    )
+}
+
+export const Head = () => {
+    return (
+        <SEO title="베스트 치과기공소 - Denture"/>
     )
 }

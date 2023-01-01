@@ -18,6 +18,8 @@ import printerCrown from "../images/cad/printer/crown.png";
 
 import { MdContentCut, MdCloseFullscreen, MdHistory, MdOutlineSignalWifi0Bar, MdInsertEmoticon, MdOutlineExpand, MdArrowDownward } from "react-icons/md";
 import ExplainLayout from "../components/layouts/ExplainLayout";
+import { navigate } from "gatsby";
+import { SEO } from "../components/seo";
 
 export default function CadcamPage()  {
     const zirconiaExplains: InfoCardProps[] = [
@@ -57,6 +59,10 @@ export default function CadcamPage()  {
         },
     ];
 
+    const onClickContact = () => {
+        navigate("/contact");
+    }
+
     return (
         <PageLayout>
             <TitleHeader subtitle="CAD/CAM"/>
@@ -84,6 +90,7 @@ export default function CadcamPage()  {
                     <BlockButton
                         color="#e3ba3e"
                         size="large"
+                        onClick={onClickContact}
                     >지금 문의하기</BlockButton>
                 </div>
 
@@ -191,5 +198,11 @@ export default function CadcamPage()  {
                 }
             </ExplainLayout>
         </PageLayout>
+    )
+}
+
+export const Head = () => {
+    return (
+        <SEO title="베스트 치과기공소 - CAD/CAM"/>
     )
 }

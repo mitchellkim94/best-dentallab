@@ -12,9 +12,11 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 4px;
     padding: 10px 0;
     color: $col-blue-text;
     font-weight: $font-weight-b;
     box-sizing: border-box;
+    max-width: 320px;
+    margin: 0 auto;
 }

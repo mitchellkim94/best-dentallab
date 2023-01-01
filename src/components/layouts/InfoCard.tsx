@@ -3,7 +3,7 @@ import * as ReactIcon from "react-icons";
 
 export interface InfoCardProps {
     infoImg?: string;
-    imgTitle?: string;
+    imgTitle?: string | JSX.Element;
     icon?: ReactIcon.IconType;
     title?: string | JSX.Element;
     desc?: string;

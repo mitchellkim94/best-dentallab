@@ -7,6 +7,7 @@ import BlockButton from "../components/buttons/BlockButton";
 // Images
 import introImg from "../images/intro.png";
 import choiceDelivery from "../images/choices/delivery.png";
+import choiceTeeth from "../images/choices/teeth.png";
 import choiceIso from "../images/choices/iso.png";
 import choicePatient from "../images/choices/patient.png";
 import choiceEquipment from "../images/choices/equipment.png";
@@ -18,6 +19,8 @@ import gateMachines from "../images/machines/gate_machines.png";
 
 import { Link } from "gatsby";
 import ImageSection from "../components/layouts/ImageSection";
+import ContactForm from "../components/ContactForm";
+import { SEO } from "../components/seo";
 
 interface ImageInfo {
     image?: string,
@@ -34,7 +37,7 @@ export default function HomePage()  {
         { image: choiceEquipment, label: '최첨단장비' },
         { image: choicePatient, label: '환자맞춤형' },
         { image: choiceDelivery, label: '전국배송' },
-        { image: gateDenture, label: '모든보철관리' },
+        { image: choiceTeeth, label: '모든보철관리' },
         { image: choiceResarch, label: '연구전담부서' },
         { image: choiceIso, label: 'ISO인증완료' }
     ];
@@ -125,6 +128,13 @@ export default function HomePage()  {
                 </section>
             </div>
 
+            <section className="home home_contact container">
+                <h2>지금 바로 문의하기</h2>
+                <div className="contact">
+                    <ContactForm/>
+                </div>
+            </section>
+
             <section className="home home_more container">
                 <h2>베스트 기공소 더 알아보기</h2>
                 <div className="buttons">
@@ -147,5 +157,11 @@ export default function HomePage()  {
                 <small className="text--grey">Copyright © 2022 베스트치과기공소. 모든 권리 보유.</small>
             </footer>
         </PageLayout>
+    )
+}
+
+export const Head = () => {
+    return (
+        <SEO title="베스트 치과기공소"/>
     )
 }
