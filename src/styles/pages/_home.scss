@@ -77,6 +77,10 @@
         & > form {
             padding: 0;
         }
+
+        @include desktop {
+            border-radius: 48px;
+        }
     }
 }
 

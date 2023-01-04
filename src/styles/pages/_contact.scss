@@ -7,12 +7,14 @@
         display: inline-flex;
         align-items: center;
         max-width: 1000px;
+        width: 100%;
         margin: 0 auto;
         height: 56px;
         position: sticky;
         top: 0;
         left: 0;
         z-index: 100;
+        background-color: white;
     }
 
     h1 {
