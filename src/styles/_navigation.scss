@@ -1,4 +1,5 @@
 .navigation_menu {
+    position: relative;
     text-align: start;
     height: calc(100% - 40px);
     padding: 20px 0;
@@ -40,5 +41,15 @@
 
     @include desktop {
         width: 420px;
+    }
+
+    .version {
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        padding: 32px;
+        margin-top: auto;
+        font-size: $font-paragraph;
+        color: $col-grey-text;
     }
 }

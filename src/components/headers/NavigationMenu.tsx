@@ -82,6 +82,7 @@ export default function NavigationMenu() {
                             ))
                         }
                     </ul>
+                    <p className="version">VER 2.1.0</p>
                 </div>
             </ModalLayout>
         </div>
