@@ -18,7 +18,7 @@ export default function ContactForm() {
 
     const onSubmit: FormEventHandler = async (e) => {
         e.preventDefault();
-
+        
         const form = e.currentTarget;
         try {
             const result = await fetch('/', {
@@ -29,14 +29,21 @@ export default function ContactForm() {
                     ...input,
                 }),
             });
-
+            
             if (result.status >= 400) {
                 throw Error("문의 등록에 실패하였습니다.");
             }
             
             setMessage([...messages, '문의가 등록되었습니다.']);
+
+            // @ts-ignore
+            window.gtag("event", "receive-email");
+
         } 
         catch (error) {
+            // @ts-ignore
+            window.gtag("event", "fail-email");
+
             console.error(error);
             alert("문의등록에 실패하였습니다.");   
         }

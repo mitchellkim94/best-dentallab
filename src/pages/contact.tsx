@@ -3,6 +3,7 @@ import React from "react";
 import { MdArrowBack } from "react-icons/md";
 import ContactForm from "../components/ContactForm";
 import PageLayout from "../components/layouts/PageLayout";
+import { SEO } from "../components/seo";
 
 export default function ContactPage()  {
     return (
@@ -17,5 +18,11 @@ export default function ContactPage()  {
                 <ContactForm/>
             </div>
         </PageLayout>
+    )
+}
+
+export const Head = () => {
+    return (
+        <SEO title="베스트 치과기공소 - 문의하기"/>
     )
 }
