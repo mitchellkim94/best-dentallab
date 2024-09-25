@@ -128,12 +128,12 @@ export default function HomePage()  {
                 </section>
             </div>
 
-            <section className="home home_contact container">
+{/*             <section className="home home_contact container">
                 <h2>지금 바로 문의하기</h2>
                 <div className="contact">
                     <ContactForm/>
                 </div>
-            </section>
+            </section> */}
 
             <section className="home home_more container">
                 <h2>베스트 기공소 더 알아보기</h2>
@@ -150,7 +150,7 @@ export default function HomePage()  {
             <footer className="home home_footer container">
                 <p className="text--grey">
                     <b>베스트 치과기공소</b><br/>
-                    대표 : 송부근  |  사업자등록번호 : 127-99-91381<br/>
+                    대표 : 송도훈  |  사업자등록번호 : 127-99-91381<br/>
                     전화번호 : 031-821-2492  |  이메일 : bestdentallab101@gmail.com<br/>
                     주소 : 경기도 의정부시 호국로 1297 태화빌딩 4층<br/>
                 </p>
